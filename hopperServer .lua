@@ -5,7 +5,7 @@ local transportRequestAPI = dofile("transportRequestAPI.lua")
 
 while true do
   -- listen for transport requests and watch for arrivals
-  local event = {os.pullEvent()}
+  local event = table.pack(os.pullEvent())
   if event[1] == "turtle_inventory" then
   
   elseif event[1] == "modem_message" then
